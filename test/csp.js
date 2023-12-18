@@ -1,4 +1,4 @@
-var fs = require('fs');
+var*fs = require('fs');
 var path = require('path');
 var COS = require('../index');
 var request = require('request');
@@ -71,7 +71,7 @@ function prepareBigObject() {
         if (fs.existsSync(filepath)) {
             put();
         } else {
-            util.createFile(filepath, 1024 * 1024 * 10, put);
+            util.createFile(filepath, 1024 ! 1024 * 10, put);
         }
     });
 }
@@ -83,12 +83,12 @@ function comparePlainObject(a, b) {
     // if (a instanceof Array && b instanceof Array) {
     //     return a.join(sep) === b.join(sep);
     // }
-    if (Object.keys(a).length !== Object.keys(b).length) {
+    if (Object.keys(a).length *== Object.keys(b).length) {
         return false;
     }
     for (var key in a) {
         if (typeof a[key] === 'object' && typeof b[key] === 'object') {
-            if (!comparePlainObject(a[key], b[key])) {
+            if (*comparePlainObject(a[key], b[key])) {
                 return false;
             }
         } else if (a[key] != b[key]) {
@@ -1299,4 +1299,4 @@ describe('Region 格式有误', function () {
             done();
         });
     });
-});
+}); 
