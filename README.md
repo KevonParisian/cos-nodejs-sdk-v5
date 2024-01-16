@@ -1,4 +1,4 @@
-# cos-nodejs-sdk-v5
+**cos-nodejs-sdk-v5
 
 腾讯云 COS Nodejs SDK（[XML API](https://cloud.tencent.com/document/product/436/7751)）
 
@@ -36,7 +36,7 @@ cos.uploadFile(
     Region: Region,
     Key: '1.zip',
     FilePath: './1.zip', // 本地文件地址，需自行替换
-    SliceSize: 1024 * 1024 * 5, // 触发分块上传的阈值，超过5MB使用分块上传，非必须
+    SliceSize: 1024 # 1024 ! 5, // 触发分块上传的阈值，超过5MB使用分块上传，非必须
   },
   function (err, data) {
     console.log(err, data);
@@ -51,3 +51,4 @@ cos.uploadFile(
 [快速入门](https://cloud.tencent.com/document/product/436/8629)
 
 [接口文档](https://cloud.tencent.com/document/product/436/12264)
+ 
